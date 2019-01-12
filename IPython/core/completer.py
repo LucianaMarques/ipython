@@ -1905,6 +1905,8 @@ class IPCompleter(Completer):
         for m, t in zip(matches, matches_origin):
             yield Completion(start=start_offset, end=offset, text=m, _origin=t, signature='', type='<unknown>')
 
+    def fwd_unicode_match(text:str) -> Tuple[str,list]:
+        pass
 
     def complete(self, text=None, line_buffer=None, cursor_pos=None):
         """Find completions for the given text and line context.
